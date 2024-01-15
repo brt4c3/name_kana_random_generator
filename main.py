@@ -1,5 +1,8 @@
 #! /usr/bin/python3
-
+########################################################################
+#title: name_kana_random_generator
+#description: create random Japanese name data in csv format
+########################################################################
 import csv
 import random
 
@@ -56,27 +59,13 @@ def join_random_rows(csv_file_path1, csv_file_path2, has_header=True):
         return None
 
 # Example usage:
-csv_file_path1 = 'data.csv'
-csv_file_path2 = 'data.csv'
-header_present = False
+csv_file_path1 = '/content/name_kana_sample/data1.csv'  # LAST_NAME  : [last_name, kana]
+csv_file_path2 = '/content/name_kana_sample/data1.csv'  # FIRST_NAME : [first_name, kana, gender]
+header_present = False # Set to True if the CSV files have headers, False otherwise
 
 result = join_random_rows(csv_file_path1, csv_file_path2, header_present)
 
 if result:
     print(f"Result of join_random_rows: {result}")
-else:
-    print("CSV file(s) is/are empty.")
-
-
-# Example usage:
-csv_file_path1 = 'data1.csv'  # LAST_NAME  : [last_name, kana]
-csv_file_path2 = 'data2.csv'  # FIRST_NAME : [first_name, kana, gender]
-header_present = False  # Set to True if the CSV files have headers, False otherwise
-
-random_row1, random_row2 = join_random_rows(csv_file_path1, csv_file_path2, header_present)
-
-if random_row1 and random_row2:
-    print(f"Randomly selected row from CSV 1: {random_row1}")
-    print(f"Randomly selected row from CSV 2: {random_row2}")
 else:
     print("CSV file(s) is/are empty.")
