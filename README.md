@@ -13,4 +13,4 @@ result = join_random_rows(csv_file_path1, csv_file_path2, header_present)
 ```
 
 ##Further study
-This project might evolve to creating a full-size CSV file by providing the row size as an argument.
+I might end up upgrade this project as a full-size CSV file creator by providing the row size as an argument.
